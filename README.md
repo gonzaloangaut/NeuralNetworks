@@ -1,87 +1,46 @@
-# Neural Networks Course – Practice & Final Project
+# Neural Networks — Coursework and Final Project
 
-This repository contains the material developed during a university (FaMAF, UNC) course on neural networks, covering topics from the biological foundations of neurons to modern deep learning architectures.
+Coursework and a final project from **Redes Neuronales** at FaMAF, Universidad Nacional de Córdoba. The course was completed in **February 2024**.
 
-## Overview
+The main project implements a convolutional autoencoder in **PyTorch** and reuses its encoder in a classifier for **Fashion-MNIST**.
 
-The course provides a comprehensive introduction to neural networks, starting from fundamental concepts such as neuron models and dynamical systems, and progressing towards fully trainable deep learning models.
+## Start here
 
-Throughout the course, both theoretical understanding and practical implementation were emphasized, including the use of **PyTorch** for modern machine learning workflows.
+- [Final project notebook](Trabajo%20Integrador/trabajo_integrador_Angaut.ipynb)
+- [Written report (PDF)](Trabajo%20Integrador/Trabajo_Integrador_ANGAUT.pdf)
+- [Open the final notebook in Google Colab](https://colab.research.google.com/github/gonzaloangaut/NeuralNetworks/blob/main/Trabajo%20Integrador/trabajo_integrador_Angaut.ipynb)
 
----
+The notebooks and report retain the original Spanish explanations.
+
+## Final project: reconstruction and classification
+
+The project connects unsupervised representation learning with supervised image classification:
+
+1. Train a convolutional autoencoder to reconstruct Fashion-MNIST images.
+2. Copy the trained encoder into a classifier with a ten-class output.
+3. Train the classifier, including the encoder parameters, with cross-entropy loss.
+4. Inspect reconstruction examples, learning curves, classification accuracy, and a confusion matrix.
+
+The implementation includes convolutional and transposed-convolutional layers, a 64-dimensional latent representation, dropout, Adam optimization, and explicit training and evaluation loops.
+
+This is a completed educational project. The original notebook uses Fashion-MNIST's official test split as validation data during training, so its displayed validation results should be read in that context.
 
 ## Practicals
 
-The `Practicos/` folder contains a series of hands-on notebooks developed during the course. These exercises progressively build the necessary tools and intuition for understanding neural networks.
+The [Practicos](Practicos/) folder contains the course exercises, covering:
 
-Topics include:
+- numerical computing with NumPy and SciPy;
+- linear algebra, ODE integration, and dynamical systems;
+- Integrate-and-Fire, Hodgkin–Huxley, and Izhikevich neuron models;
+- single-layer networks and multilayer perceptrons;
+- PyTorch tensors, image classification, and autoencoders.
 
-* Python and Google Colab basics
-* Numerical computing with NumPy and SciPy
-* Linear algebra and numerical integration of ODEs
-* Dynamical systems (Lorenz system, logistic map)
-* Biophysical neuron models:
+## Running the notebook
 
-  * Integrate-and-Fire
-  * Hodgkin–Huxley
-  * Izhikevich
-* Introduction to neural networks:
+The final notebook was developed in Google Colab and includes Colab-specific imports. Open it with the link above and run the cells in order; Fashion-MNIST is downloaded by the notebook.
 
-  * Single-layer networks
-  * Multilayer perceptrons
-* Deep learning with PyTorch:
-
-  * Tensor operations
-  * Model fitting via least squares
-  * Image classification (Fashion-MNIST)
-  * Autoencoders and convolutional autoencoders
-
----
-
-## Final Project
-
-The `Trabajo Integrador/` folder contains the final project of the course, including both a Jupyter notebook and a written report.
-
-### Project: Autoencoder + Convolutional Classifier (Fashion-MNIST)
-
-In this project, a **convolutional autoencoder** was implemented and trained to learn compressed representations of images from the Fashion-MNIST dataset. The encoder was then reused to build a **classifier**, leveraging learned features for improved performance.
-
-Key aspects:
-
-* Implementation in **PyTorch**
-* Use of convolutional and transposed convolutional layers
-* Regularization via dropout
-* Training with ADAM optimizer
-* Evaluation using:
-
-  * Reconstruction error
-  * Classification accuracy (~90%)
-  * Confusion matrix
-
-The project demonstrates how unsupervised learning (autoencoders) can be combined with supervised learning to build efficient models for image classification.
-
----
-
-## Tools & Technologies
-
-* Python
-* NumPy / SciPy
-* Matplotlib
-* **PyTorch**
-* Google Colab
-
----
-
-## Key Takeaways
-
-* Strong foundation in both biological and mathematical models of neurons
-* Experience with dynamical systems and numerical simulations
-* Practical implementation of neural networks from scratch
-* Hands-on experience with modern deep learning frameworks (**PyTorch**)
-* End-to-end development of a deep learning project
-
----
+The saved outputs come from the original coursework. Dependencies are installed in the notebook and are not pinned to a reproducible environment.
 
 ## Author
 
-**Gonzalo Angaut**
+Gonzalo Angaut
